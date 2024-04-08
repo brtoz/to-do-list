@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <main class="main">
+
+      <article class="app-box">
+
+        <header class="header">
+
+          <div>
+            <h1 class="h1 header-title">Yapılacaklar Listesi</h1>
+
+            <p class="header-time" data-header-time></p>
+          </div>
+
+          <div class="dropdown-wrapper">
+            <button class="menu-btn" aria-label="Toggle menu" data-menu-toggler>
+              <ion-icon name="ellipsis-horizontal" aria-hidde="true"></ion-icon>
+            </button>
+
+            <div class="dropdown-container" data-menu>
+              <ul class="dropdown-list">
+
+                <li class="dropdown-item">
+                  <p class="item-title">Tema</p>
+                  <div class="theme-btn-group"></div>
+                  <div class="theme-btn-group">
+                    <button class="theme-btn" style="--hue: 15" data-theme-btn data-hue="15"></button>
+                    <button class="theme-btn" style="--hue: 45" data-theme-btn data-hue="45"></button>
+                    <button class="theme-btn" style="--hue: 75" data-theme-btn data-hue="75"></button>
+                    <button class="theme-btn" style="--hue: 105" data-theme-btn data-hue="105"></button>
+                    <button class="theme-btn" style="--hue: 135" data-theme-btn data-hue="135"></button>
+                    <button class="theme-btn" style="--hue: 165" data-theme-btn data-hue="165"></button>
+                    <button class="theme-btn" style="--hue: 195" data-theme-btn data-hue="195"></button>
+                    <button class="theme-btn" style="--hue: 225" data-theme-btn data-hue="225"></button>
+                    <button class="theme-btn" style="--hue: 255" data-theme-btn data-hue="255"></button>
+                    <button class="theme-btn" style="--hue: 285" data-theme-btn data-hue="285"></button>
+                    <button class="theme-btn" style="--hue: 315" data-theme-btn data-hue="315"></button>
+                    <button class="theme-btn" style="--hue: 345" data-theme-btn data-hue="345"></button>
+                  </div>
+
+                </li>
+
+                <li>
+                  <button class="dropdown-link" data-modal-toggler data-menu-toggler>
+                    <ion-icon name="information-circle-outline"></ion-icon>
+
+                    <span class="span">Uygulama Bilgisi</span>
+                  </button>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+        </header>
+
+        <div class="title-wrapper" data-welcome-note>
+          <img src="./calender-image.svg" width="130" height="115" alt="calender image" class="img">
+
+          <h2 class="h2">
+            Görünüşe Göre <br>
+            Tüm Görevlerinizi Tamamladınız
+          </h2>
+        </div>
+
+        <ul class="task-list" data-task-list></ul>
+
+        <div class="input-wrapper" title="Add a task in 'My Day'">
+
+          <input type="text" name="task" aria-label="Add task" maxlength="100" placeholder="Yeni Görev Ekle"
+            class="input-field" data-task-input>
+
+          <span class="input-text">Görev Ekle</span>
+
+          <div class="input-icon">
+            <ion-icon name="add-outline" class="add-icon" aria-hidden="true"></ion-icon>
+
+            <ion-icon name="ellipse-outline" class="circle-icon" aria-hidden="true"></ion-icon>
+          </div>
+
+        </div>
+
+      </article>
+
+      <div class="app-info" data-info-modal>
+        <div class="modal">
+
+          <h2 class="modal-title">Uygulama Bilgisi</h2>
+
+          <ul class="modal-list">
+
+            <li class="modal-item">
+              <strong class="strong">Versiyon:</strong>
+
+              <span class="span">1.0</span>
+            </li>
+
+            <li class="modal-item">
+              <strong class="strong">Yayınlanma:</strong>
+
+              <span class="span">8 Nisan 2024</span>
+            </li>
+
+            <li class="modal-item">
+              <strong class="strong">Son Güncelleme:</strong>
+
+              <span class="span">8 Nisan 2022</span>
+            </li>
+
+            <li class="modal-item">
+              <strong class="strong">Geliştirici:</strong>
+
+              <a href="https://github.com/brtoz" class="span" id="gelistirici">brtoz</a>
+            </li>
+
+          </ul>
+
+          <button class="modal-btn" data-modal-toggler>Kapat</button>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
