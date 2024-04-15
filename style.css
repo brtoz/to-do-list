@@ -768,6 +768,16 @@ body.loaded {
 
 }
 
+@media (max-width: 767px) {
+  .input-wrapper {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+  }
+}
+
+
 @keyframes gradientFlow {
   0% {
     background-position: 0% 50%;
